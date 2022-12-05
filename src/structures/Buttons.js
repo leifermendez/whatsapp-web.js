@@ -78,23 +78,23 @@ class Buttons {
         return buttons.map((button, index) => {
             if (button.url && button.number && button.id) throw 'Only pick one of the following (url/number/id)';
             if (button.number) {
-                throw 'Not supported, URL and Call buttons are not supported on IOS';
-                /* return {
+                //throw 'Not supported, URL and Call buttons are not supported on IOS';
+                return {
                     index,
                     callButton: {
                         displayText: button.body, 
                         phoneNumber: button.number || ''
                     }
-                }; */
+                }; 
             } else if (button.url) {
-                throw 'Not supported, URL and Call buttons are not supported on IOS';
-                /* return {
+                //throw 'Not supported, URL and Call buttons are not supported on IOS';
+                 return {
                     index,
                     urlButton: {
                         displayText: button.body, 
                         url: button.url || ''
                     }
-                }; */
+                }; 
             } else {
                 return {
                     index,
